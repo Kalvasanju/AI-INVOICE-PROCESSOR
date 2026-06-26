@@ -1,0 +1,15 @@
+<h1>📄 DocuMind AI</h1>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Upload</button>
+</form>
+
+{% if message %}
+<h3 style="color:green;">{{ message }}</h3>
+{% endif %}
+
+{% if text %}
+<h3>Extracted Text:</h3>
+<pre>{{ text }}</pre>
+{% endif %}
